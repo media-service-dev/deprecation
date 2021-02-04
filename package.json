@@ -1,0 +1,32 @@
+{
+    "name": "@mscs/deprecation",
+    "version": "0.1.0-DEV",
+    "description": "A function to trigger deprecations.",
+    "keywords": [
+        "deprecation"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint ./src/*.ts"
+    },
+    "main": "index.js",
+    "author": "Jason Schilling <jschilling@media-service.com>",
+    "license": "MIT",
+    "files": [
+        "README.md",
+        "LICENSE",
+        "package.json",
+        "dist/*.js",
+        "dist/*.d.ts",
+        "dist/*.js.map",
+        "yarn.lock"
+    ],
+    "devDependencies": {
+        "@mscs/eslint-config": "^0.2.1",
+        "@tsconfig/recommended": "^1.0.1",
+        "eslint": "^7.19.0",
+        "typescript": "^4.1.3"
+    },
+    "dependencies": {},
+    "peerDependencies": {}
+}
