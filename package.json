@@ -9,7 +9,7 @@
         "build": "tsc",
         "lint": "eslint ./src/*.ts"
     },
-    "main": "index.js",
+    "main": "./dist/index.js",
     "author": "Jason Schilling <jschilling@media-service.com>",
     "license": "MIT",
     "files": [
