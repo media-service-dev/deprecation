@@ -1,6 +1,6 @@
 {
     "name": "@mscs/deprecation",
-    "version": "0.1.1",
+    "version": "0.1.2-DEV",
     "description": "A function to trigger deprecations.",
     "keywords": [
         "deprecation"
