@@ -1,7 +1,7 @@
 
 # Deprecation
 
-A function to trigger deprecations.
+A function to trigger deprecation warnings.
 
 ## Install
 
@@ -9,18 +9,6 @@ Just run `yarn install @mscs/deprecation`
 
 ## Usage
 
-There a several usages:
-
-Trigger with custom message:
-```typescript
-import { deprecate } from "@mscs/deprecation"; 
-
-function deprecatedMethod(){
-    deprecate("deprecatedMethod is deprecated. Use something else instead.");
-}
-```
-
-Trigger with the conventional message:
 ```typescript
 import { deprecate } from "@mscs/deprecation"; 
 
@@ -29,7 +17,36 @@ function deprecatedMethod(){
 }
 ```
 
-You can change behaviour by set the `triggerHandler` method.
+This emits the warning using our default template:
+
+`Deprecated since 3.4 and will be removed in 6.0.`
+
+Providing a replacement for the deprecated component:
+
+```typescript
+import { deprecate } from "@mscs/deprecation"; 
+
+function deprecatedMethod(){
+    deprecate(3, 4, 6, "notDeprecatedMethod");
+}
+```
+
+Emits
+
+`Deprecated since 3.4 and will be removed in 6.0. Use notDeprecatedMethod instead`
+
+Trigger with custom message:
+
+```typescript
+import { deprecate } from "@mscs/deprecation"; 
+
+function deprecatedMethod(){
+    deprecate("deprecatedMethod is deprecated. Use something else instead.");
+}
+```
+
+You can change how the message is emitted by overrding the `triggerHandler` method.
+
 ```typescript
 import { deprecate, defaultDeprecationTriggerHandler } from "@mscs/deprecation"; 
 
